@@ -1,0 +1,369 @@
+<div class="popup swap" id="popup2">
+      <div class="popup__body">
+        <div class="popup__content swap">
+          <div class="swape-block" id="step-1">
+            <div class="swape-block__nav">
+              <button class="swape-block__nav-button swape-block__nav-button--active">
+                <span>Step 1</span>
+                <span>Disclaimer</span>
+              </button>
+              <button class="swape-block__nav-button">
+                <span>Step 2</span>
+                <span>Swap</span>
+              </button>
+              <button class="swape-block__nav-button">
+                <span>Step 3</span>
+                <span>Confirmation</span>
+              </button>
+            </div>
+            <div class="swape-block__text">
+              <span>
+                By using this form of exchange, you accept all possible risks associated with problems arising through the fault of third parties and force majeure circumstances.</span>
+              <span>Any errors made by the user in the exchange form, that are detected after its sending are irreversible.</span>
+              <span>Falcon project does not retain any personal information submitted via the form.</span>
+              <span>All swap transactions must be made through the addresses of your personal wallet. Do not use the exchange for this.</span>
+              <span>Application Processing Speed</span>
+              <span>All applications are held in semi-automatic and automatic modes and are aimed to be completed within 24 hours from the date of application creation.
+                Falcon Project is not responsible for transaction delays associated with the blockchain network congestion.</span>
+              <span>Vouchers</span>
+              <span>The issue of vouchers is limited and described in the project documentation along with the technical specifications.</span>
+              <span>The availability of vouchers is determined by market demand and may vary. In the absence of vouchers, be aware it may not always be fully updated on the exchange form. If the exchange form was sent before the data was
+                synchronized, and the necessary voucher at the time of exchange is not available at the Falcon deposit address, then FNT tokens will be returned back to the sender.</span>
+              <span>Falcon Project team guarantees</span>
+              <span>Exchange rate 1 FNT = 1 FNC / 1 FNC = 1 FNT</span>
+              <span>The voucher corresponds to the number of FNT tokens indicated in its description and image. Vouchers are exchanged through the exchange form without additional fees and only if there is a voucher at the exchange address.</span>
+            </div>
+            <div class="swape-block__bottom">
+              <button class="swape-block__bottom-button cancel close">
+                CANCEL
+              </button>
+              <button class="swape-block__bottom-button ACCEPT">
+                I ACCEPT &gt;
+              </button>
+            </div>
+          </div>
+          <div class="swape-block" id="step-2" style="display: none;">
+            <div class="swape-block__nav">
+              <button class="swape-block__nav-button swape-block__nav-button--active">
+                <span>Step 1</span>
+                <span>Disclaimer</span>
+              </button>
+              <button class="swape-block__nav-button swape-block__nav-button--active">
+                <span>Step 2</span>
+                <span>Swap</span>
+              </button>
+              <button class="swape-block__nav-button">
+                <span>Step 3</span>
+                <span>Confirmation</span>
+              </button>
+            </div>
+            <div class="swape-block__change">
+              <div class="swape-block__column left">
+                <h6>GIVE</h6>
+                <span>
+                  What do you want to give?
+                </span>
+                <ul class="swape-block__list">
+                  <li class="swape-block__item">
+                    <label class="form__radio">
+                      <input name="currency_from" value="Voucher" type="radio" class="input__radio" data-id="1">
+                      <div class="swape-block__link">
+                        <img src="img/swap/2348623952496.png" alt="coin icon" class="swape-block__img active">
+                        <img src="img/swap/coin1.png" alt="coin icon" class="swape-block__img">
+                        Voucher <br>(ERC-1155)
+                      </div>
+                    </label>
+                  </li>
+                  <li class="swape-block__item">
+                    <label class="form__radio">
+                      <input name="currency_from" value="FNT" type="radio" class="input__radio" data-id="2">
+                      <div class="swape-block__link">
+                        <img src="img/swap/tokenmono.png" alt="coin icon" class="swape-block__img active">
+                        <img src="img/swap/token.png" alt="coin icon" class="swape-block__img">
+                        FNT <br>(ERC-20)
+                      </div>
+                    </label>
+                  </li>
+                  <li class="swape-block__item">
+                    <label class="form__radio">
+                      <input name="currency_from" value="FNC" type="radio" class="input__radio" data-id="3">
+                      <div class="swape-block__link">
+                        <img src="img/swap/coinmono.png" alt="coin icon" class="swape-block__img active">
+                        <img src="img/swap/coin.png" alt="coin icon" class="swape-block__img">
+                        FNC <br>(Coin)
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+                <form action="" class="swape-form-block">
+                  <div class="swape-form-row">
+                    <label for="" class="swape-form-block__label" style="position: relative;">
+                      <div class="label-text">
+                        Amount
+                      </div>
+                      <input placeholder="Example: 1,000,000" type="text" class="form__input" name="quantity_from" reguired="">
+
+                      <select id="quantity_static" placeholder="Example: 1,000,000" class="form__input" style="display: none; width: 100%; padding: 12px">
+                        <option value="">Choose nominal
+                        <option value="1000000">1 000 000
+                        <option value="5000000">5 000 000
+                        <option value="10000000">10 000 000
+                        <option value="50000000">50 000 000
+                      </select>
+                    </label>
+                  </div>
+                  <div class="swape-form-row">
+                    <label for="" class="swape-form-block__label">
+                      <div class="label-text">
+                        Address
+                      </div>
+                      <input placeholder="Example: 0xdc5864ede28bd4405aa04d93e05a053" type="text" class="form__input" name="address_from" reguired="">
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <div class="swap-decor-block">
+                <div class="swap-decor-block__line--hidden"></div>
+                <div class="swap-decor-block__line">
+                  <img src="img/swap/Line 3.png" alt="decor" class="decor">
+                </div>
+                <div class="swap-decor-block__img">
+                  <img src="img/swap/swap_horiz_24px 1.png" alt="decor" class="decor">
+                </div>
+                <div class="swap-decor-block__line--hidden"></div>
+                <div class="swap-decor-block__line">
+                  <img src="img/swap/Line 4.png" alt="decor" class="decor">
+                </div>
+              </div>
+              <div class="swape-block__column right">
+                <h6>RECEIVE</h6>
+                <span>
+                  What do you want to receive?
+                </span>
+                <ul class="swape-block__list">
+                  <li class="swape-block__item">
+                    <label class="form__radio">
+                      <input name="currency_to" value="Voucher" type="radio" class="input__radio" data-id="1">
+                      <div class="swape-block__link">
+                        <img src="img/swap/2348623952496.png" alt="coin icon" class="swape-block__img active">
+                        <img src="img/swap/coin1.png" alt="coin icon" class="swape-block__img">
+                        Voucher <br>(ERC-1155)
+                      </div>
+                    </label>
+                  </li>
+                  <li class="swape-block__item">
+                    <label class="form__radio">
+                      <input name="currency_to" value="FNT" type="radio" class="input__radio" data-id="2">
+                      <div class="swape-block__link">
+                        <img src="img/swap/tokenmono.png" alt="coin icon" class="swape-block__img active">
+                        <img src="img/swap/token.png" alt="coin icon" class="swape-block__img">
+                        FNT <br>(ERC-20)
+                      </div>
+                    </label>
+                  </li>
+                  <li class="swape-block__item">
+                    <label class="form__radio">
+                      <input name="currency_to" value="FNC" type="radio" class="input__radio" data-id="3">
+                      <div class="swape-block__link">
+                        <img src="img/swap/coinmono.png" alt="coin icon" class="swape-block__img active">
+                        <img src="img/swap/coin.png" alt="coin icon" class="swape-block__img">
+                        FNC <br>(Coin)
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+                <form action="" class="swape-form-block">
+                  <div class="swape-form-row">
+                    <label for="number1" class="swape-form-block__label">
+                      <div class="label-text">
+                        Amount
+                      </div>
+                      <input placeholder="Example: 1,000,000" type="text" class="form__input" name="quantity_to" reguired="">
+                    </label>
+                  </div>
+                  <div class="swape-form-row">
+                    <label for="number2" class="swape-form-block__label">
+                      <div class="label-text">
+                        Address
+                      </div>
+                      <input placeholder="Example: 0xdc5864ede28bd4405aa04d93e05a053" type="text" class="form__input" name="address_to" reguired="">
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="swape-block__bottom">
+              <button class="swape-block__bottom-button cancel close">
+                CANCEL
+              </button>
+              <button class="swape-block__bottom-button cancel back">
+                &larr; BACK
+              </button>
+              <button class="swape-block__bottom-button ACCEPT">
+                I ACCEPT &gt;
+              </button>
+            </div>
+            <div class="line-swape--flex">
+              <div class="line-swape"></div>
+              <div class="line-swape"></div>
+            </div>
+          </div>
+          <div class="swape-block" id="step-3" style="display: none;">
+            <div class="swape-block__nav">
+              <button class="swape-block__nav-button swape-block__nav-button--active">
+                <span>Step 1</span>
+                <span>Disclaimer</span>
+              </button>
+              <button class="swape-block__nav-button swape-block__nav-button--active">
+                <span>Step 2</span>
+                <span>Swap</span>
+              </button>
+              <button class="swape-block__nav-button swape-block__nav-button--active">
+                <span>Step 3</span>
+                <span>Confirmation</span>
+              </button>
+            </div>
+            <h6 class="title-step-3">PLEASE, CHECK INFORMATION</h6>
+            <div class="swape-block__change">
+              <div class="swape-block__column left">
+                <h6 class="title-step-3">GIVE</h6>
+                <ul class="swape-block__list swape-block__list--step-3">
+                  <li class="swape-block__item" id="summary_from">
+                    <a class="swape-block__link">
+                      <img src="img/swap/2348623952496.png" alt="coin icon" class="swape-block__img">
+                      Voucher <br>(ERC-1155)
+                    </a>
+                    <div class="amount">
+                      1.000.000
+                    </div>
+                    <div class="address">
+                      0xdc5864ede28bd4405aa04d93e05a0531797d9d59
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="swap-decor-block swap-decor-block--vertical">
+                <div class="swap-decor-block__line--hidden"></div>
+                <div class="swap-decor-block__img">
+                  <img src="img/swap/swap_horiz_24px 1.png" alt="decor">
+                </div>
+                <div class="swap-decor-block__line--hidden"></div>
+              </div>
+              <div class="swape-block__column right">
+                <h6 class="title-step-3">RECEIVE</h6>
+                <ul class="swape-block__list swape-block__list--step-3">
+                  <li class="swape-block__item" id="summary_to">
+                    <a class="swape-block__link">
+                      <img src="img/swap/2348623952496.png" alt="coin icon" class="swape-block__img">
+                      Voucher <br>(ERC-1155)
+                    </a>
+                    <div class="amount">
+                      1.000.000
+                    </div>
+                    <div class="address">
+                      0xdc5864ede28bd4405aa04d93e05a0531797d9d59
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swape-block__bottom">
+              <button class="swape-block__bottom-button cancel close">
+                CANCEL
+              </button>
+              <button class="swape-block__bottom-button cancel back">
+                &larr; BACK
+              </button>
+              <button class="swape-block__bottom-button ACCEPT">
+                I ACCEPT &gt;
+              </button>
+            </div>
+            <div class="line-swape--flex">
+              <div class="line-swape"></div>
+              <div class="line-swape"></div>
+              <div class="line-swape"></div>
+            </div>
+          </div>
+          <div class="swape-voucher" id="step-warning" style="display:none;">
+            <div class="swape-voucher-wrapper">
+              <div class="swape-voucher-block">
+                <img src="img/swap/icon-warning.png" alt="icon" class="swape-voucher__img">
+              </div>
+              <div class="swape-voucher__text">
+                <span>
+                  How to receive or exchange voucher?
+                </span><br>
+                <span>
+                  To get a voucher, first install an Enjin or Trust mobile wallet. To give / receive a voucher, indicate in the column “Amount” the cost of the voucher. (1,000,000 / 5,000,000 / 10,000,000 / 50,000,000), then enter your ERC-20 address
+                  in the “Address” column. Click “Accept”.
+                </span>
+              </div>
+              <div class="button--centr-align">
+                <button class="swape-block__bottom-button cancel close_block">
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swape-voucher" id="step-error" style="display:none;">
+            <div class="swape-voucher-wrapper">
+              <div class="swape-voucher-block">
+                <img src="img/swap/icon-warning.png" alt="icon" class="swape-voucher__img">
+              </div>
+              <div class="swape-voucher__text">
+                <span>
+                  Possible exchange: <br>
+                  Voucher < -> FNT <br>
+                    Coin < -> FNT <br>
+                      Voucher < -> Coin <br>
+                </span>
+              </div>
+              <div class="button--centr-align">
+                <button class="swape-block__bottom-button cancel close_block">
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swape-voucher" id="step-result-graph" style="display:none;">
+            <div class="swape-voucher-wrapper">
+              <div class="swape-voucher-block">
+                <h6>transfer address</h6>
+                <img src="img/swap/qrcode 1.png" alt="qr code" class="swape-voucher__img img--border">
+              </div>
+              <div class="swape-voucher__text">
+                <span></span>
+                <span class="address_result">
+                  0x8c54085ad729fde488338fc50cfc8dfd5e2b5b89
+                </span>
+              </div>
+              <div class="page-qr-code__block">
+                <a href="#" class="page-qr-code__link">
+                  <img src="img/swap/iconQR.png" alt="icon decor" class="page-qr-code__img">
+                </a>
+              </div>
+              <div class="button--centr-align">
+                <button class="swape-block__bottom-button cancel close">
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swape-voucher" id="step-result-graph-OK" style="display:none;">
+            <div class="swape-voucher-wrapper">
+              <div class="swape-voucher-block">
+                <h6>transfer sent</h6>
+                <img src="img/swap/Vector-ok.svg" class="swape-voucher__img swape-voucher__img--margin">
+              </div>
+              <div class="button--centr-align">
+                <button class="swape-block__bottom-button cancel close">
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="shadow">
+          </div>
+        </div>
+      </div>
+    </div>

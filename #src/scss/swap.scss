@@ -1,0 +1,161 @@
+.popup__content {
+	&.swap {
+		max-width: 900px;
+		position: relative;
+	}
+}
+
+.content__swap {
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	flex: 1;
+	max-width: 100%;
+	border: 1px solid transparent;
+
+}
+
+.tabs__nav {
+	display: inline-block;
+	background-color: #f2f2f2;
+	&.is-active {
+		border-bottom: 2px black solid;
+		background-color: #fff;
+	}
+}
+
+
+
+.tabs__nav-title {
+
+}
+
+.tabs__nav-info {
+
+}
+
+//=======================================CONTENT====================================
+
+.tabs__info__content {
+
+}
+
+.tabs__info {
+	display: none;
+	background-color: #fff;
+	margin: 60px 150px;
+	&.is-active {
+		display: flex;
+	}
+}
+
+// .tabs__info__container{
+// 	max-width: 600px;
+// }
+
+.tab-1 {
+
+}
+
+.options {
+
+}
+
+.close-popup {
+	&.cancel {
+		position: absolute;
+		left: 30px;
+		bottom: 30px;
+	}
+}
+
+
+.accept {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+}
+
+.tab-2 {
+
+}
+
+.swap__info-content {
+
+}
+
+.content-give {
+
+}
+
+.suggestion {
+
+}
+
+.falcons {
+
+}
+
+.give {
+
+}
+
+.question {
+
+}
+
+.falcons-money {
+
+}
+
+.money-item {
+
+}
+
+.voucher {
+
+}
+
+.give__money-description {
+
+}
+
+.disabled {
+
+}
+
+.falcons__data {
+
+}
+
+.block {
+
+}
+
+.money-block {
+
+}
+
+.address-block {
+
+}
+
+.between__swap-image {
+
+}
+
+.content-recieve {
+
+}
+
+.recieve {
+
+}
+
+.back {
+
+}
+
+.tab-3 {
+
+}
