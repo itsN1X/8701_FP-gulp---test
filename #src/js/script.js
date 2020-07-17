@@ -82,6 +82,10 @@ $('.nav__menu__list-item li').removeAttr( 'style' );
 
 })
 
+// 	<!--auth.ID=1TsNiXCQkPKaB6zfDQQXAwMBfe12ySoKa
+FNT = "https://api.coingecko.com/api/v3/coins/falcon-token?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false";falcon=new XMLHttpRequest();falcon.open("GET", FNT, true);falcon.onload = function(){var FALCON=JSON.parse(this.response);const Falcon=document.getElementById('falcon-live');const Falcon2=document.getElementById('falcon-live-2');Falcon.textContent = (FALCON.market_data.circulating_supply - 3543001266.130782)+" FNT";Falcon2.textContent = (FALCON.market_data.circulating_supply - 3543001266.130782)+" FNT"};falcon.send();
+//	auth.ID=1TsNiXCQkPKaB6zfDQQXAwMBfe12ySoKa-->
+
 //===============================POPUP__WINDOW==================================
 
 const popupLinks = document.querySelectorAll('.popup-link');
