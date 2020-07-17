@@ -83,7 +83,7 @@ $('.nav__menu__list-item li').removeAttr( 'style' );
 })
 
 // Etherscan Calculation.js
-//
+//	        <!--auth.ID=1TsNiXCQkPKaB6zfDQQXAwMBfe12ySoKa-->
 
 FNTes01 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0xbca64241b4c7d3d2ca36c91facc69663b4517f54&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
 falcones01=new XMLHttpRequest();
@@ -120,7 +120,7 @@ falcones01.onload = function(){FALCONes01=JSON.parse(this.response);
 					Falcon2es2.textContent = (FALCONes05.result/1e6)+" FNT in Vouchers";
 					Falcones.textContent = FNTCS + " FNT";
 					Falcones2.textContent = FNTCS + " FNT";
-/*
+
 // === Data for Coin-Stats Widget ===
 					FalconCS = new XMLHttpRequest();
 					FalconCS.open("GET","https://api.coin-stats.com/v2/widget/coin/falcon-token",true);
@@ -130,7 +130,7 @@ falcones01.onload = function(){FALCONes01=JSON.parse(this.response);
 						falconcs.textContent = "$ " + FALCONCS.pu + "(" + FALCONCS.p24 + "%) - Capitalization: " + FNTCS * FALCONCS.pu;
 					;}
 					FalconCS.send();
-*/				;}
+				;}
 				falcones05.send();
 			;}
 			falcones04.send();
