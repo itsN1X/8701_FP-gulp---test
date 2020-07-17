@@ -82,6 +82,64 @@ $('.nav__menu__list-item li').removeAttr( 'style' );
 
 })
 
+// Etherscan Calculation.js
+//
+
+FNTes01 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0xbca64241b4c7d3d2ca36c91facc69663b4517f54&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
+falcones01=new XMLHttpRequest();
+falcones01.open("GET", FNTes01, true);
+falcones01.onload = function(){FALCONes01=JSON.parse(this.response);
+	FNTes02 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0xf56b07ab0e46afef054ae0a58d4195ee944bea93&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
+	falcones02=new XMLHttpRequest();
+	falcones02.open("GET", FNTes02, true);
+	falcones02.onload = function(){FALCONes02=JSON.parse(this.response);
+		FNTes03 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0x3deffdb7004b1b4c5388f5a0ee7c2031c0ad375d&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
+		falcones03=new XMLHttpRequest();
+		falcones03.open("GET", FNTes03, true);
+		falcones03.onload = function(){FALCONes03=JSON.parse(this.response);
+			FNTes04 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0xa32043305cab58eca36badc26e62b7af83dc825b&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
+			falcones04=new XMLHttpRequest();
+			falcones04.open("GET", FNTes04, true);
+			falcones04.onload = function(){FALCONes04=JSON.parse(this.response);
+				FNTes05 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0x8c54085ad729fde488338fc50cfc8dfd5e2b5b89&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
+				falcones05=new XMLHttpRequest();
+				falcones05.open("GET", FNTes05, true);
+				falcones05.onload = function(){
+					FALCONes05=JSON.parse(this.response);
+					const Falcones=document.getElementById('falcon-live');
+					const Falcon2es=document.getElementById('falcon-live-v');
+					const Falcones2=document.getElementById('falcon-live-2');
+					const Falcon2es2=document.getElementById('falcon-live-v2');
+					FNTCS = (1e11
+						- FALCONes01.result/1e6
+						- FALCONes02.result/1e6
+						- FALCONes03.result/1e6
+						- FALCONes04.result/1e6
+					);
+					Falcon2es.textContent = (FALCONes05.result/1e6)+" FNT in Vouchers";
+					Falcon2es2.textContent = (FALCONes05.result/1e6)+" FNT in Vouchers";
+					Falcones.textContent = FNTCS + " FNT";
+					Falcones2.textContent = FNTCS + " FNT";
+/*
+// === Data for Coin-Stats Widget ===
+					FalconCS = new XMLHttpRequest();
+					FalconCS.open("GET","https://api.coin-stats.com/v2/widget/coin/falcon-token",true);
+					FalconCS.onload = function(){
+						FALCONCS=JSON.parse(this.response);
+						falconcs = document.getElementById("falcon-live-cs");
+						falconcs.textContent = "$ " + FALCONCS.pu + "(" + FALCONCS.p24 + "%) - Capitalization: " + FNTCS * FALCONCS.pu;
+					;}
+					FalconCS.send();
+*/				;}
+				falcones05.send();
+			;}
+			falcones04.send();
+		;}
+		falcones03.send();
+	;}
+	falcones02.send();
+;}
+falcones01.send();
 //===============================POPUP__WINDOW==================================
 
 const popupLinks = document.querySelectorAll('.popup-link');
