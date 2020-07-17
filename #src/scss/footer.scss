@@ -108,3 +108,14 @@
 	padding: 0 0 15px 0;
 	font-size: calc(12px + 8 * ((100vw - 320px) / (1180 - 320)));
 }
+
+// For market details in footer
+// ` $ ${price} (${24h_change_percentage}%) - Capitalization: ${CircSupply*price} `
+// === "$ " + .pu + "(" + .p24 + "%) - Capitalization: " + .pu*FNTCS === //
+.footer__lower-widjet {
+	text-align: center;
+	font-family: 'BankGothicMdBT';
+	font-size: 16px;
+	color: white;
+	padding: 0 0 15px 0;
+}
