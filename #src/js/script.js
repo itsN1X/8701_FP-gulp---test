@@ -116,10 +116,10 @@ falcones01.onload = function(){FALCONes01=JSON.parse(this.response);
 						- FALCONes03.result/1e6
 						- FALCONes04.result/1e6
 					);
-					Falcon2es.textContent = (FALCONes05.result/1e6).toFixed(0);
-					Falcon2es2.textContent = (FALCONes05.result/1e6).toFixed(0);
-					Falcones.textContent = FNTCS.toFixed(0);
-					Falcones2.textContent = FNTCS.toFixed(0);
+					Falcon2es.textContent = (FALCONes05.result/1e6).toFixed(0).toLocaleString();
+					Falcon2es2.textContent = (FALCONes05.result/1e6).toFixed(0).toLocaleString();
+					Falcones.textContent = FNTCS.toFixed(0).toLocaleString();
+					Falcones2.textContent = FNTCS.toFixed(0).toLocaleString();
 /*
 // === Data for Coin-Stats Widget ===
 					FalconCS = new XMLHttpRequest();
