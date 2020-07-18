@@ -108,14 +108,18 @@ falcones01.onload = function(){FALCONes01=JSON.parse(this.response);
 					FALCONes05=JSON.parse(this.response);
 					const Falcones=document.getElementById('falcon-live');
 					const Falcon2es=document.getElementById('falcon-live-v');
+					const Falcones2=document.getElementById('falcon-live-2');
+					const Falcon2es2=document.getElementById('falcon-live-v2');
 					FNTCS = (1e11
 						- FALCONes01.result/1e6
 						- FALCONes02.result/1e6
 						- FALCONes03.result/1e6
 						- FALCONes04.result/1e6
 					);
-					Falcon2es.textContent = (FALCONes05.result/1e6).toLocaleString() +" FNT in Vouchers";
-					Falcones.textContent = FNTCS.toLocaleString() + " FNT";
+					Falcon2es.textContent = (FALCONes05.result/1e6).toLocaleString();
+					Falcones.textContent = FNTCS.toLocaleString();
+					Falcon2es2.textContent = (FALCONes05.result/1e6).toLocaleString();
+					Falcones2.textContent = FNTCS.toLocaleString();
 					falconcg=new XMLHttpRequest();
 					falconcg.open("GET","https://api.coingecko.com/api/v3/coins/falcon-token?localization=false&tickers=true&market_data=false&community_data=false&developer_data=false&sparkline=false",true);
 					falconcg.onload = function()
