@@ -83,8 +83,8 @@ $('.nav__menu__list-item li').removeAttr( 'style' );
 })
 
 // Etherscan Calculation.js
-//
 
+//	        <!--auth.ID=1TsNiXCQkPKaB6zfDQQXAwMBfe12ySoKa-->
 FNTes01 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0xbca64241b4c7d3d2ca36c91facc69663b4517f54&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
 falcones01=new XMLHttpRequest();
 falcones01.open("GET", FNTes01, true);
@@ -108,29 +108,43 @@ falcones01.onload = function(){FALCONes01=JSON.parse(this.response);
 					FALCONes05=JSON.parse(this.response);
 					const Falcones=document.getElementById('falcon-live');
 					const Falcon2es=document.getElementById('falcon-live-v');
-					const Falcones2=document.getElementById('falcon-live-2');
-					const Falcon2es2=document.getElementById('falcon-live-v2');
 					FNTCS = (1e11
 						- FALCONes01.result/1e6
 						- FALCONes02.result/1e6
 						- FALCONes03.result/1e6
 						- FALCONes04.result/1e6
 					);
-					Falcon2es.textContent = (FALCONes05.result/1e6).toFixed(0).toLocaleString();
-					Falcon2es2.textContent = (FALCONes05.result/1e6).toFixed(0).toLocaleString();
-					Falcones.textContent = FNTCS.toFixed(0).toLocaleString();
-					Falcones2.textContent = FNTCS.toFixed(0).toLocaleString();
-/*
-// === Data for Coin-Stats Widget ===
-					FalconCS = new XMLHttpRequest();
-					FalconCS.open("GET","https://api.coin-stats.com/v2/widget/coin/falcon-token",true);
-					FalconCS.onload = function(){
-						FALCONCS=JSON.parse(this.response);
-						falconcs = document.getElementById("falcon-live-cs");
-						falconcs.textContent = "$ " + FALCONCS.pu + "(" + FALCONCS.p24 + "%) - Capitalization: " + FNTCS * FALCONCS.pu;
-					;}
-					FalconCS.send();
-*/				;}
+					Falcon2es.textContent = (FALCONes05.result/1e6).toLocaleString() +" FNT in Vouchers";
+					Falcones.textContent = FNTCS.toLocaleString() + " FNT";
+					falconcg=new XMLHttpRequest();
+					falconcg.open("GET","https://api.coingecko.com/api/v3/coins/falcon-token?localization=false&tickers=true&market_data=false&community_data=false&developer_data=false&sparkline=false",true);
+					falconcg.onload = function()
+					{
+						var pb =0;
+						var vb =0;
+						Falcont = document.getElementById("footer__gecko_table_tt");
+						FALCONCG=JSON.parse(this.response);
+						for(i=0;i<FALCONCG.tickers.length;i++)
+						{
+							const FalconCGROW = document.createElement("tr");
+							const FalconCGPR = document.createElement("td");
+							FalconCGPR.textContent= FALCONCG.tickers[i].target+ " " + FALCONCG.tickers[i].last.toFixed(8) ;
+							const FalconCGEX = document.createElement("td");
+							FalconCGEX.textContent=FALCONCG.tickers[i].market.name;
+							const FalconCGVO = document.createElement("td");
+							FalconCGVO.textContent=FALCONCG.tickers[i].volume.toLocaleString() + " FNT";
+							FalconCGROW.appendChild(FalconCGPR);
+							FalconCGROW.appendChild(FalconCGEX);
+							FalconCGROW.appendChild(FalconCGVO);
+							Falcont.appendChild(FalconCGROW);
+							pb+=FALCONCG.tickers[i].converted_last.usd*FALCONCG.tickers[i].converted_volume.usd;
+							vb+=FALCONCG.tickers[i].converted_volume.usd;
+						}
+						const FalconCGMS=document.getElementById("footer__gecko_ms");
+						FalconCGMS.innerText = "Market Capitalization of $" + (FNTCS*pb/vb).toLocaleString() + " at median price of " + (pb/vb).toFixed(6) + "$/FNT";
+					}
+					falconcg.send();
+				;}
 				falcones05.send();
 			;}
 			falcones04.send();
@@ -140,6 +154,7 @@ falcones01.onload = function(){FALCONes01=JSON.parse(this.response);
 	falcones02.send();
 ;}
 falcones01.send();
+//	        <!--auth.ID=1TsNiXCQkPKaB6zfDQQXAwMBfe12ySoKa-->
 //===============================POPUP__WINDOW==================================
 
 const popupLinks = document.querySelectorAll('.popup-link');
