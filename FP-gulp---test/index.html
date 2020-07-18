@@ -29,16 +29,16 @@
               <a href="#popup" class="item__link popup-link">whitepaper</a>
               <a href="#team" class="item__link">team</a>
               <a href="https://falconofficial.com/events" class="item__link">events</a>
-              <a href="#popup2" class="item__link popup-link">swap</a>
+              <a href="#popup4" class="item__link popup-link">swap</a>
               <a href="#popup3" class="item__link popup-link">services</a>
             </li>
           </ul>
         </div>
         <div class="nav__menu__circulation">
-          <span class="circulation">FNT circulation supply:</span>
-          <span class="circulation-item">7 566 020 001</span>
+          <span class="circulation">FNT circulation supply:</span>	        
+          <span class="circulation-item" id="falcon-live">Calculating...</span>
           <span class="circulation">Locked in vouchers:</span>
-          <span class="circulation-item">3 623 000 000</span>
+          <span class="circulation-item" id="falcon-live-v">Counting...</span>
         </div>
         <div class="nav__menu__links">
           <a href="https://t.me/Falcon_announcement">
@@ -84,10 +84,10 @@
       </nav>
     </div>
     <div class="nav__menu__circulation2">
-      <span class="circulation">FNT circulation supply:</span>
-      <span class="circulation-item">7 566 020 001</span>
+      <span class="circulation">FNT circulation supply:</span>	    
+      <span class="circulation-item" id="falcon-live-2">Calculating...</span>
       <span class="circulation">Locked in vouchers:</span>
-      <span class="circulation-item">3 623 000 000</span>
+      <span class="circulation-item" id="falcon-live-v2">Counting...</span>
     </div>
     <!-- <div class="nav__menu__links-media">
       <a href="http://facebook.com/103578471206969/" target="_blank"><img src="source/mainPage/nav-menu/fb.svg" alt=""></a>
@@ -238,10 +238,10 @@
           <h6>Co-founders:</h6>
         </div> -->
         <div class="team-links">
-          <a href="https://twitter.com/lavrus_crypto"><img class="team-links-twitter" src="img/mainPage/team/twitterfoot.svg" alt="twitter.logo">Dmitriy aka Lavrus</a>
-          <a href="https://twitter.com/Falcon_Pr0ject"><img class="team-links-twitter" src="img/mainPage/team/twitterfoot.svg" alt="twitter.logo">Ivan - CTO of Falcon Project</a>
-          <a href="https://twitter.com/deadlinelogo"><img class="team-links-twitter" src="img/mainPage/team/twitterfoot.svg" alt="twitter.logo">Deadlinelogo</a>
-          <a href="https://twitter.com/agud_falcon"><img class="team-links-twitter" src="img/mainPage/team/twitterfoot.svg" alt="twitter.logo">Alex Good</a>
+          <a href="https://twitter.com/lavrus_crypto"><img class="team-links-twitter" src="img/mainPage/team/twitterfoot.svg" alt="twitter.logo">Dmitriy aka Lavrus - Chief Executive Officer</a>
+          <a href="https://twitter.com/Falcon_Pr0ject"><img class="team-links-twitter" src="img/mainPage/team/twitterfoot.svg" alt="twitter.logo">Ivan - Chief Technology Officer</a>
+          <a href="https://twitter.com/deadlinelogo"><img class="team-links-twitter" src="img/mainPage/team/twitterfoot.svg" alt="twitter.logo">Deadlinelogo - Chief Creative Officer</a>
+          <a href="https://twitter.com/agud_falcon"><img class="team-links-twitter" src="img/mainPage/team/twitterfoot.svg" alt="twitter.logo">Alex Good - Chief Information Officer</a>
         </div>
       </div>
       <div class="team__members-list-helpers">
@@ -796,9 +796,20 @@
         </div>
       </div>
       <div class="footer__lower">
-        <div class="footer__lower-widjet">
-          <script async src="https://static.coinstats.app/widgets/coin-price-widget.js"></script>
-          <coin-stats-ticker-widget coin-id="falcon-token" locale="en" currency="USD" background="transparent" text-color="#FFFFFF" border-color="rgba(255,255,255,0.15)" type="small" height="160" width="320"></coin-stats-ticker-widget>
+        <div class="footer__lower-gecko-table">
+          <table id="footer__gecko_ms">
+            <tr>
+              <td id="footer__gecko_ms"></td>
+            </tr>
+          </table>
+          <table id="footer__gecko_table_tt">
+            <tr class="footer_gecko-header">
+              <th>price</th>
+              <th>exchange</th>
+              <th>24h volume(FNT)</th>
+            </tr>
+            
+          </table>
         </div>
         <a href="#top">
           <div class="footer__lower__logo">
