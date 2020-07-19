@@ -120,11 +120,7 @@ falcones01.onload = function(){FALCONes01=JSON.parse(this.response);
           Falcon2es2.textContent = (FALCONes05.result/1e6).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
           Falcones.textContent = FNTCS.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
           Falcones2.textContent = FNTCS.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          
-          
-
-
-					falconcg=new XMLHttpRequest();
+          				falconcg=new XMLHttpRequest();
 					falconcg.open("GET","https://api.coingecko.com/api/v3/coins/falcon-token?localization=false&tickers=true&market_data=false&community_data=false&developer_data=false&sparkline=false",true);
 					falconcg.onload = function()
 					{
@@ -138,9 +134,15 @@ falcones01.onload = function(){FALCONes01=JSON.parse(this.response);
 							const FalconCGPR = document.createElement("td");
 							FalconCGPR.textContent= FALCONCG.tickers[i].target+ " " + FALCONCG.tickers[i].last.toFixed(8) ;
 							const FalconCGEX = document.createElement("td");
-							FalconCGEX.textContent=FALCONCG.tickers[i].market.name;
+							FalconCGEXac= "footer__gecko_exchanges_" + FALCONCG.tickers[i].market.identifier;
+							const FalconCGEXa = document.createElement("a");
+							FalconCGEXa.textContent=FALCONCG.tickers[i].market.name;
+							FalconCGEXa.setAttribute("href",FALCONCG.tickers[i].trade_url);
+							FalconCGEXa.setAttribute("class",FalconCGEXac);
+							FalconCGEXa.setAttribute("target","_blank");
+							FalconCGEX.appendChild(FalconCGEXa);
 							const FalconCGVO = document.createElement("td");
-							FalconCGVO.textContent=FALCONCG.tickers[i].volume.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+							FalconCGVO.textContent=FALCONCG.tickers[i].volume.toLocaleString() + " FNT";
 							FalconCGROW.appendChild(FalconCGPR);
 							FalconCGROW.appendChild(FalconCGEX);
 							FalconCGROW.appendChild(FalconCGVO);
