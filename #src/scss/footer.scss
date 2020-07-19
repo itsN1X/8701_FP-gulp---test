@@ -88,6 +88,8 @@
 	margin: 35px 0 0 0;
 }
 
+/*	<!--auth.ID=1TsNiXCQkPKaB6zfDQQXAwMBfe12ySoKa-->	*/
+
 .footer__lower-gecko-table {
 	border: solid 1px white;
 	border-radius: 10px;
@@ -115,10 +117,39 @@
 	text-align: center;
 	font-family: "BankGothicMdBT";
 	color: black;
-	text-shadow: 1px 1px 2px vyan;
+	text-shadow: 1px 1px 2px cyan;
 	font-size: calc(14px + 8 * ((100vw - 320px) / (1180 - 320)));
 }
 
+.footer__gecko_exchanges_south_xchange {
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  font-family: "BankGothicMdBT";
+  color: #33f;
+  text-shadow: 1px 1px 2px vyan;
+  font-size: calc(14px + 8 * ((100vw - 320px) / (1180 - 320)));
+}
+
+.footer__gecko_exchanges_uniswap {
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  font-family: "BankGothicMdBT";
+  color: #f0a;
+  text-shadow: 1px 1px 2px vyan;
+  font-size: calc(14px + 8 * ((100vw - 320px) / (1180 - 320)));
+}
+
+.footer__gecko_exchanges_whitebit {
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  font-family: "BankGothicMdBT";
+  color: white;
+  text-shadow: 1px 1px 2px vyan;
+  font-size: calc(14px + 8 * ((100vw - 320px) / (1180 - 320)));
+}
 .footer__lower__logo {
 	padding: 0 0 10px 0;
 	display: flex;	
