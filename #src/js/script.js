@@ -82,6 +82,89 @@ $('.nav__menu__list-item li').removeAttr( 'style' );
 
 })
 
+// Etherscan Calculation.js
+
+//	        <!--auth.ID=1TsNiXCQkPKaB6zfDQQXAwMBfe12ySoKa-->
+FNTes01 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0xbca64241b4c7d3d2ca36c91facc69663b4517f54&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
+falcones01=new XMLHttpRequest();
+falcones01.open("GET", FNTes01, true);
+falcones01.onload = function(){FALCONes01=JSON.parse(this.response);
+	FNTes02 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0xf56b07ab0e46afef054ae0a58d4195ee944bea93&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
+	falcones02=new XMLHttpRequest();
+	falcones02.open("GET", FNTes02, true);
+	falcones02.onload = function(){FALCONes02=JSON.parse(this.response);
+		FNTes03 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0x3deffdb7004b1b4c5388f5a0ee7c2031c0ad375d&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
+		falcones03=new XMLHttpRequest();
+		falcones03.open("GET", FNTes03, true);
+		falcones03.onload = function(){FALCONes03=JSON.parse(this.response);
+			FNTes04 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0xa32043305cab58eca36badc26e62b7af83dc825b&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
+			falcones04=new XMLHttpRequest();
+			falcones04.open("GET", FNTes04, true);
+			falcones04.onload = function(){FALCONes04=JSON.parse(this.response);
+				FNTes05 = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&address=0x8c54085ad729fde488338fc50cfc8dfd5e2b5b89&tag=latest&apikey=DIQNA28DRMHXN51CBTN2KCUTWIP2S4DFSQ";
+				falcones05=new XMLHttpRequest();
+				falcones05.open("GET", FNTes05, true);
+				falcones05.onload = function(){
+					FALCONes05=JSON.parse(this.response);
+					const Falcones=document.getElementById('falcon-live');
+          const Falcon2es=document.getElementById('falcon-live-v');
+          const Falcones2=document.getElementById('falcon-live-2');
+					const Falcon2es2=document.getElementById('falcon-live-v2');
+					FNTCS = (1e11
+						- FALCONes01.result/1e6
+						- FALCONes02.result/1e6
+						- FALCONes03.result/1e6
+						- FALCONes04.result/1e6
+					);
+          Falcon2es.textContent = (FALCONes05.result/1e6).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
+          Falcon2es2.textContent = (FALCONes05.result/1e6).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          Falcones.textContent = FNTCS.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
+          Falcones2.textContent = FNTCS.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          				falconcg=new XMLHttpRequest();
+					falconcg.open("GET","https://api.coingecko.com/api/v3/coins/falcon-token?localization=false&tickers=true&market_data=false&community_data=false&developer_data=false&sparkline=false",true);
+					falconcg.onload = function()
+					{
+						var pb =0;
+						var vb =0;
+						Falcont = document.getElementById("footer__gecko_table_tt");
+						FALCONCG=JSON.parse(this.response);
+						for(i=0;i<FALCONCG.tickers.length;i++)
+						{
+							const FalconCGROW = document.createElement("tr");
+							const FalconCGPR = document.createElement("td");
+							FalconCGPR.textContent= FALCONCG.tickers[i].target+ " " + FALCONCG.tickers[i].last.toFixed(8) ;
+							const FalconCGEX = document.createElement("td");
+							FalconCGEXac= "footer__gecko_exchanges_" + FALCONCG.tickers[i].market.identifier;
+							const FalconCGEXa = document.createElement("a");
+							FalconCGEXa.textContent=FALCONCG.tickers[i].market.name;
+							FalconCGEXa.setAttribute("href",FALCONCG.tickers[i].trade_url);
+							FalconCGEXa.setAttribute("class",FalconCGEXac);
+							FalconCGEXa.setAttribute("target","_blank");
+							FalconCGEX.appendChild(FalconCGEXa);
+							const FalconCGVO = document.createElement("td");
+							FalconCGVO.textContent=FALCONCG.tickers[i].volume.toLocaleString() + " FNT";
+							FalconCGROW.appendChild(FalconCGPR);
+							FalconCGROW.appendChild(FalconCGEX);
+							FalconCGROW.appendChild(FalconCGVO);
+							Falcont.appendChild(FalconCGROW);
+							pb+=FALCONCG.tickers[i].converted_last.usd*FALCONCG.tickers[i].converted_volume.usd;
+							vb+=FALCONCG.tickers[i].converted_volume.usd;
+						}
+						const FalconCGMS=document.getElementById("footer__gecko_ms");
+						FalconCGMS.innerText = "market capitalization of $" + (FNTCS*pb/vb).toFixed(0) + " at median price of " + (pb/vb).toFixed(6) + "$/FNT";
+					}
+					falconcg.send();
+				;}
+				falcones05.send();
+			;}
+			falcones04.send();
+		;}
+		falcones03.send();
+	;}
+	falcones02.send();
+;}
+falcones01.send();
+
 //===============================POPUP__WINDOW==================================
 
 const popupLinks = document.querySelectorAll('.popup-link');
