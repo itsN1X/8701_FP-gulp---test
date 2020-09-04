@@ -84,7 +84,7 @@ $('.nav__menu__list-item li').removeAttr( 'style' );
 
 // Etherscan Calculation.js
 //	        <!--auth.ID=1TsNiXCQkPKaB6zfDQQXAwMBfe12ySoKa-->
-FNTes00 = "https://api.etherscan.io/api?module=stat&action=tokensupply&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&apikey=YHMFHFSV36RRAYD3IR2W2J5E29W8S3TMBU";
+FNTes00 = "https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0xdc5864ede28bd4405aa04d93e05a0531797d9d59&apikey=YHMFHFSV36RRAYD3IR2W2J5E29W8S3TMBU";
 falcones00=new XMLHttpRequest();
 falcones00.open("GET", FNTes00, true);
 falcones00.onload = function(){FALCONes00=JSON.parse(this.response);
